@@ -1,0 +1,374 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Workerjack </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="description" content="Jack Handyman Services offers reliable home maintenance, installation, and small repairs in the Bay Area">
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <style>
+      /* 背景图设置 */
+      #intro {
+        /* 将图片设为背景 */
+        background: url("images/workerjackbg.png") no-repeat center center;
+        background-size: 100%; /* 让图片覆盖整个容器 */
+        min-height: 60vh;       /* 避免内容过少时背景太挤 */
+        padding: 4em 2em;       /* 给内容一些内边距 */
+        position: relative;     /* 为了放置遮罩层 */
+      }
+
+      /* 半透明遮罩层 */
+      #intro::before {
+        content: "";
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background: rgba(0, 0, 0, 0.35); /* 可根据需要调整透明度 */
+        z-index: 0;
+      }
+
+      /* 让 #intro 里的文字和按钮位于遮罩层之上，并加文字阴影 */
+      #intro h1,
+      #intro p,
+      #intro .actions {
+        position: relative;
+        z-index: 3;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+      }
+
+      /* 原有：保证画廊图片在小屏幕自适应 */
+      @media only screen and (max-width: 768px) {
+        .gallery img {
+          max-width: 100%;
+          height: auto;
+        }
+      }
+
+      /* 新增：让地图 iframe 在各端自适应宽度 */
+      .map iframe {
+        max-width: 100%;
+        width: 100% !important;   /* 覆盖内联的宽度 */
+        height: auto !important; /* 覆盖内联的高度 */
+        border: 0 !important;    /* 保持无边框 */
+        display: block;
+        margin: 0 auto;          /* 居中 */
+      }
+      /* 针对不同屏幕高度做最小高度限制，避免地图过小 */
+      @media only screen and (max-width: 768px) {
+        .map iframe {
+          height: 300px !important;
+        }
+      }
+      @media only screen and (min-width: 769px) {
+        .map iframe {
+          height: 450px !important;
+        }
+      }
+
+      /* 优化 footer 在手机端的排版：让段落居中，行距更舒适 */
+      @media only screen and (max-width: 768px) {
+        #footer p {
+          margin: 10px 0;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body class="is-preload">
+    <div id="wrapper" class="fade-in">
+      
+      <!-- Intro Section -->
+      <div id="intro">
+        <h1>Workerjack</h1>
+        <p>A Handyman </p>
+        <p>
+          <a href="tel:+16199839628" class="button icon solid solo fa-phone">619-983-9628</a>
+        </p>
+        <ul class="actions">
+          <li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
+        </ul>
+      </div>
+      
+      <!-- Header -->
+      <header id="header">
+        <a href="index.html" class="logo">workerJack</a>
+      </header>
+      
+      <!-- Navigation -->
+      <nav id="nav">
+        <ul class="links">
+          <li class="active"><a href="#workerjack">workerjack</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <ul class="icons">
+          <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+          <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+          <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+          <li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+        </ul>
+      </nav>
+      
+      <!-- Main Content -->
+      <div id="main">
+        
+        <!-- workerjack Section -->
+        <section id="workerjack">
+          <header class="major">
+            <h2>workerjack</h2>
+          </header>
+          <p>
+           I'm a handyman, ready to get the job done right in the Bay Area.
+          </p>
+        </section>
+        
+        <!-- Services Section -->
+        <section id="services">
+          <header class="major">
+            <h2>Services</h2>
+          </header>
+          <ul>
+            <li>✅ <strong>Furniture Assembly</strong> – Quick and precise assembly to save you time.</li>
+            <li>✅ <strong>Painting & Repairs</strong> – Refresh walls and furniture with expert painting and touch-ups.</li>
+            <li>✅ <strong>Flooring Installation & Repairs</strong> – Installation and repair to fix squeaky floors.</li>
+            <li>✅ <strong>Hardware Installation</strong> – Install lights, faucets, locks, and handles for a polished look.</li>
+            <li>✅ <strong>Minor Home Repairs</strong> – Upgrades and small renovations to improve your living space.</li>
+          </ul>
+        </section>
+        
+        <!-- Projects Section -->
+        <section id="projects">
+          <header class="major">
+            <h2>Projects</h2>
+          </header>
+          <p style="font-size: 0.7em; color: #666;">
+            These images showcase improvements where I provided handyman services such as installation, painting, and minor repairs. For larger projects, I collaborate with licensed contractors.
+          </p>
+          <div class="gallery">
+    
+            <!-- 1. Stairs - Before -->
+            <article>
+              <a href="images/stairsoriginal.png" class="image">
+                <img src="images/stairsoriginal.png" alt="Stairs - Before" />
+              </a>
+              <h3>Stairs - Before</h3>
+            </article>
+    
+            <!-- 2. Stairs - After -->
+            <article>
+              <a href="images/stairsnew.png" class="image">
+                <img src="images/stairsnew.png" alt="Stairs - After" />
+              </a>
+              <h3>Stairs - After</h3>
+            </article>
+    
+            <!-- 3. Bathroom - Before -->
+            <article>
+              <a href="images/bathroomoriginal.png" class="image">
+                <img src="images/bathroomoriginal.png" alt="Bathroom - Before" />
+              </a>
+              <h3>Bathroom - Before</h3>
+            </article>
+    
+            <!-- 4. Bathroom - After -->
+            <article>
+              <a href="images/bathroomnew.png" class="image">
+                <img src="images/bathroomnew.png" alt="Bathroom - After" />
+              </a>
+              <h3>Bathroom - After</h3>
+            </article>
+    
+            <!-- 5. Kitchen - Before -->
+            <article>
+              <a href="images/kitchenoriginal.png" class="image">
+                <img src="images/kitchenoriginal.png" alt="Kitchen - Before" />
+              </a>
+              <h3>Kitchen - Before</h3>
+            </article>
+    
+            <!-- 6. Kitchen - After -->
+            <article>
+              <a href="images/kitchennew.png" class="image">
+                <img src="images/kitchennew.png" alt="Kitchen - After" />
+              </a>
+              <h3>Kitchen - After</h3>
+            </article>
+    
+            <!-- 7. Extra Kitchen -->
+            <article>
+              <a href="images/kitchen.jpg" class="image">
+                <img src="images/kitchen.jpg" alt="Extra Kitchen" />
+              </a>
+              <h3>Extra Kitchen</h3>
+            </article>
+    
+            <!-- 8. Extra Bathroom -->
+            <article>
+              <a href="images/bathroom.png" class="image">
+                <img src="images/bathroom.png" alt="Extra Bathroom" />
+              </a>
+              <h3>Extra Bathroom</h3>
+            </article>
+    
+            <!-- 9. Tools -->
+            <article>
+              <a href="images/tools.JPEG" class="image">
+                <img src="images/tools.JPEG" alt="Tools" />
+              </a>
+              <h3>Tools</h3>
+            </article>
+    
+            <!-- 10. Work Van -->
+            <article>
+              <a href="images/workvan.PNG" class="image">
+                <img src="images/workvan.PNG" alt="Work Van" />
+              </a>
+              <h3>Work Van</h3>
+            </article>
+    
+            <!-- 11. Extra Project 1 -->
+            <article>
+              <a href="images/bathroom2.jpg" class="image">
+                <img src="images/bathroom2.jpg" alt="Extra Project 1" />
+              </a>
+              <h3>Extra Project 1</h3>
+            </article>
+    
+            <!-- 12. Extra Project 2 -->
+            <article>
+              <a href="images/bathroomnew2.jpg" class="image">
+                <img src="images/bathroomnew2.jpg" alt="Extra Project 2" />
+              </a>
+              <h3>Extra Project 2</h3>
+            </article>
+    
+          </div>
+        </section>
+        
+        <!-- Testimonials Section -->
+        <section id="testimonials">
+          <header class="major">
+            <h2>Testimonials</h2>
+          </header>
+          <div class="posts">
+            <!-- 1. Michael  -->
+            <article>
+              <header style="display: flex; align-items: center; gap: 10px;">
+                <img src="images/user1.png" alt="Michael" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;" />
+                <div>
+                  <h3 style="margin: 0;">Michael <span>★★★★★</span></h3>
+                  <p class="date" style="margin: 2px 0;">2023-04-01</p>
+                </div>
+              </header>
+              <p>
+                I’ve worked with many handymen in the Bay Area, and WorkerJack is by far the fastest and most reliable! As a real estate agent, I often need last-minute repairs before listing a home, and Jack and his team have never let me down. They respond within hours and get the job done within 48 hours—sometimes even the same day! I’ve worked with them on at least five properties, and every time, the quality is top-notch. Highly recommended for agents who need speed and efficiency!"
+              </p>
+            </article>
+
+            <!-- 2. Lee -->
+            <article>
+              <header style="display: flex; align-items: center; gap: 10px;">
+                <img src="images/user2.png" alt=" Lee" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;" />
+                <div>
+                  <h3 style="margin: 0;">Lee <span>★★★★★</span></h3>
+                  <p class="date" style="margin: 2px 0;">2024-08-13</p>
+                </div>
+              </header>
+              <p>
+                Jack helped me patch and repaint a section of drywall that got damaged while rearranging furniture. We got lucky—he had an opening the same day, and I was able to get it taken care of right away.
+
+                The work was done smoothly, no surprises, and the wall looks flawless. What I really appreciated was the clear, upfront pricing—no hidden fees, no last-minute add-ons. I also liked how easy the payment process was—Zelle made it quick and hassle-free.
+
+                Definitely keeping Jack in my contacts for future repairs. Well done, Jack!
+              </p>
+            </article>
+
+            <!-- 3. Catherine -->
+            <article>
+              <header style="display: flex; align-items: center; gap: 10px;">
+                <img src="images/user3.png" alt="Catherine" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;" />
+                <div>
+                  <h3 style="margin: 0;">Catherine<span>★★★★★</span></h3>
+                  <p class="date" style="margin: 2px 0;">2023-01-07</p>
+                </div>
+              </header>
+              <p>
+                I was impressed with Jack’s professionalism and attention to detail when he installed my new kitchen cabinets. He even offered valuable tips for future maintenance. Fantastic job!
+              </p>
+            </article>
+
+            <!-- 4. Dora  -->
+            <article>
+              <header style="display: flex; align-items: center; gap: 10px;">
+                <img src="images/user4.png" alt="Dora" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;" />
+                <div>
+                  <h3 style="margin: 0;">Dora <span>★★★★★</span></h3>
+                  <p class="date" style="margin: 2px 0;">2023-03-10</p>
+                </div>
+              </header>
+              <p>
+                Jack transformed my outdated bathroom into a modern oasis. His expertise, patience, and problem-solving skills made the entire process seamless and stress-free. I’m thrilled with the outcome!
+              </p>
+            </article>
+
+            <!-- 5. John  -->
+            <article>
+              <header style="display: flex; align-items: center; gap: 10px;">
+                <img src="images/user5.png" alt="John" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;" />
+                <div>
+                  <h3 style="margin: 0;">John <span>★★★★★</span></h3>
+                  <p class="date" style="margin: 2px 0;">2023-02-25</p>
+                </div>
+              </header>
+              <p>
+                Jack’s quick response and quality workmanship saved me from a potential plumbing disaster. He diagnosed the issue right away, fixed it promptly, and left everything spotless.
+              </p>
+            </article>
+          </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section id="contact">
+          <header class="major">
+            <h2>Contact</h2>
+          </header>
+          <p>Feel free to contact us to discuss your home repair needs!</p>
+          <div class="contact-info">
+            <p><strong>Phone:</strong> <a href="tel:+16199839628">619-983-9628</a></p>
+            <p><strong>Email:</strong> <a href="mailto:cxfriday@gmail.com">cxfriday@gmail.com</a></p>
+          </div>
+          <!-- Embedded Google Map -->
+          <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3172.2811833195647!2d-121.99308668469978!3d37.54853997980161!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fcac0c0b6e3ed%3A0x60aaaca7e15d42b6!2sFremont%2C%20CA!5e0!3m2!1sen!2sus!4v1678549897688!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+        </section>
+        
+      </div>
+      
+      <!-- Footer -->
+      <footer id="footer">
+        <p>Serving the Bay Area | Quality Handyman Services | <a href="sms:+16199839628">Text Me: 619-983-9628</a></p>
+        <p style="font-size: 14px; color: #666;">
+          Legal Notice: Handyman services in California are legally limited to projects under $1,000, including labor and materials.
+          <a href="https://www.cslb.ca.gov/Resources/IndustryBulletins/2024/AB%202622%20Implementation.FINAL.pdf" target="_blank" style="color: #4CAF50;">View Regulation Details</a>
+        </p>
+        <div class="copyright">
+          <ul>
+            <li>&copy; Jack Handyman Services</li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+    
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
