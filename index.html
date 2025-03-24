@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
   <head>
-    <title>Workerjack </title>
+    <title>Workerjack - Home</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <meta name="description" content="Jack Handyman Services offers reliable home maintenance, installation, and small repairs in the Bay Area">
@@ -10,23 +10,20 @@
     <style>
       /* 背景图设置 */
       #intro {
-        /* 将图片设为背景 */
         background: url("images/workerjackbg.png") no-repeat center center;
-        background-size: 100%; /* 让图片覆盖整个容器 */
-        min-height: 60vh;       /* 避免内容过少时背景太挤 */
-        padding: 4em 2em;       /* 给内容一些内边距 */
-        position: relative;     /* 为了放置遮罩层 */
+        background-size: 100%;
+        min-height: 60vh;
+        padding: 4em 2em;
+        position: relative;
       }
-
       /* 半透明遮罩层 */
       #intro::before {
         content: "";
         position: absolute;
         top: 0; left: 0; right: 0; bottom: 0;
-        background: rgba(0, 0, 0, 0.35); /* 可根据需要调整透明度 */
+        background: rgba(0, 0, 0, 0.35);
         z-index: 0;
       }
-
       /* 让 #intro 里的文字和按钮位于遮罩层之上，并加文字阴影 */
       #intro h1,
       #intro p,
@@ -44,33 +41,43 @@
         }
       }
 
-      /* 新增：让地图 iframe 在各端自适应宽度 */
-      .map iframe {
-        max-width: 100%;
-        width: 100% !important;   /* 覆盖内联的宽度 */
-        height: auto !important; /* 覆盖内联的高度 */
-        border: 0 !important;    /* 保持无边框 */
-        display: block;
-        margin: 0 auto;          /* 居中 */
+      /* 新增：服务区块的网格布局 */
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 20px;
+        margin-top: 2em;
       }
-      /* 针对不同屏幕高度做最小高度限制，避免地图过小 */
-      @media only screen and (max-width: 768px) {
-        .map iframe {
-          height: 300px !important;
-        }
+      .service-box {
+        position: relative;
+        background-size: cover;
+        background-position: center;
+        height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+        overflow: hidden;
       }
-      @media only screen and (min-width: 769px) {
-        .map iframe {
-          height: 450px !important;
-        }
+      .service-box::before {
+        /* 半透明遮罩，方便文字可读 */
+        content: "";
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background: rgba(0,0,0,0.4);
+        z-index: 1;
       }
-
-      /* 优化 footer 在手机端的排版：让段落居中，行距更舒适 */
-      @media only screen and (max-width: 768px) {
-        #footer p {
-          margin: 10px 0;
-          text-align: center;
-        }
+      .service-box-text {
+        position: relative;
+        z-index: 2;
+        color: #fff;
+        font-size: 1.2em;
+        font-weight: 600;
+        text-align: center;
+        text-transform: uppercase;
+        padding: 0 1em;
+        line-height: 1.4em;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
       }
     </style>
   </head>
@@ -85,6 +92,7 @@
           <a href="tel:+16199839628" class="button icon solid solo fa-phone">619-983-9628</a>
         </p>
         <ul class="actions">
+          <!-- 如果你想做滚动特效，可以保留，否则也可以删除 -->
           <li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
         </ul>
       </div>
@@ -97,11 +105,13 @@
       <!-- Navigation -->
       <nav id="nav">
         <ul class="links">
-          <li class="active"><a href="#workerjack">workerjack</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#testimonials">Testimonials</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <!-- 保留首页的链接（active） -->
+          <li class="active"><a href="index.html">Home</a></li>
+          <!-- 修改为指向新的页面 -->
+          <li><a href="Workerjack Services.html">Services</a></li>
+          <li><a href="Workerjack Projects.html">Projects</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="Contact Workerjack.html">Contact</a></li>
         </ul>
         <ul class="icons">
           <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
@@ -114,221 +124,52 @@
       <!-- Main Content -->
       <div id="main">
         
-        <!-- workerjack Section -->
+        <!-- 保留首页想要展示的内容，例如 "workerjack" 简介 -->
         <section id="workerjack">
           <header class="major">
-            <h2>workerjack</h2>
+            <h2>About Workerjack</h2>
           </header>
           <p>
-           I’m Jack, your local handyman with years of experience in home repair and improvement. I am dedicated to delivering fast, efficient, and high-quality service to ensure your home is always in top condition.
+            I’m Jack, your local handyman with years of experience in home repair and improvement. 
+            I am dedicated to delivering fast, efficient, and high-quality service to ensure your 
+            home is always in top condition.
           </p>
         </section>
-        
-        <!-- Services Section -->
+
+        <!-- Services Section（已替换为与图片相似的八项服务卡片） -->
         <section id="services">
           <header class="major">
             <h2>Workerjack Services</h2>
           </header>
-          <ul>
-            <li>✅ <strong>Furniture Assembly</strong> – Quick and precise assembly to save you time.</li>
-            <li>✅ <strong>Painting & Repairs</strong> – Refresh walls and furniture with expert painting and touch-ups.</li>
-            <li>✅ <strong>Flooring Installation & Repairs</strong> – Installation and repair to fix squeaky floors.</li>
-            <li>✅ <strong>Hardware Installation</strong> – Install lights, faucets, locks, and handles for a polished look.</li>
-            <li>✅ <strong>Minor Home Repairs</strong> – Upgrades and small renovations to improve your living space.</li>
-          </ul>
-        </section>
-        
-        <!-- Projects Section -->
-        <section id="projects">
-          <header class="major">
-            <h2>Workerjack Projects</h2>
-          </header>
-          <p style="font-size: 0.7em; color: #666;">
-            These images showcase improvements where I provided handyman services such as installation, painting, and minor repairs. For larger projects, I collaborate with licensed contractors.
-          </p>
-          <div class="gallery">
-    
-            <!-- 1. Stairs - Before -->
-            <article>
-              <a href="images/stairsoriginal.png" class="image">
-                <img src="images/stairsoriginal.png" alt="Stairs - Before" />
-              </a>
-              <h3>Stairs - Before</h3>
-            </article>
-    
-            <!-- 2. Stairs - After -->
-            <article>
-              <a href="images/stairsnew.png" class="image">
-                <img src="images/stairsnew.png" alt="Stairs - After" />
-              </a>
-              <h3>Stairs - After</h3>
-            </article>
-    
-            <!-- 3. Bathroom - Before -->
-            <article>
-              <a href="images/bathroomoriginal.png" class="image">
-                <img src="images/bathroomoriginal.png" alt="Bathroom - Before" />
-              </a>
-              <h3>Bathroom - Before</h3>
-            </article>
-    
-            <!-- 4. Bathroom - After -->
-            <article>
-              <a href="images/bathroomnew.png" class="image">
-                <img src="images/bathroomnew.png" alt="Bathroom - After" />
-              </a>
-              <h3>Bathroom - After</h3>
-            </article>
-    
-            <!-- 5. Kitchen - Before -->
-            <article>
-              <a href="images/kitchenoriginal.png" class="image">
-                <img src="images/kitchenoriginal.png" alt="Kitchen - Before" />
-              </a>
-              <h3>Kitchen - Before</h3>
-            </article>
-    
-            <!-- 6. Kitchen - After -->
-            <article>
-              <a href="images/kitchennew.png" class="image">
-                <img src="images/kitchennew.png" alt="Kitchen - After" />
-              </a>
-              <h3>Kitchen - After</h3>
-            </article>
-    
-            <!-- 7. Extra Kitchen -->
-            <article>
-              <a href="images/kitchen.jpg" class="image">
-                <img src="images/kitchen.jpg" alt="Extra Kitchen" />
-              </a>
-              <h3>Extra Kitchen</h3>
-            </article>
-    
-            <!-- 8. Extra Bathroom -->
-            <article>
-              <a href="images/bathroom.png" class="image">
-                <img src="images/bathroom.png" alt="Extra Bathroom" />
-              </a>
-              <h3>Extra Bathroom</h3>
-            </article>
-    
-            <!-- 9. Tools -->
-            <article>
-              <a href="images/Tools.jpeg" class="image">
-                <img src="images/Tools.jpeg" alt="Tools" />
-              </a>
-              <h3>Tools</h3>
-            </article>
-    
-            <!-- 10. Work Van -->
-            <article>
-              <a href="images/workvan.PNG" class="image">
-                <img src="images/workvan.PNG" alt="Work Van" />
-              </a>
-              <h3>Work Van</h3>
-            </article>
-    
-            <!-- 11. Extra Project 1 -->
-            <article>
-              <a href="images/bathroom2.jpg" class="image">
-                <img src="images/bathroom2.jpg" alt="Extra Project 1" />
-              </a>
-              <h3>Extra Project 1</h3>
-            </article>
-    
-            <!-- 12. Extra Project 2 -->
-            <article>
-              <a href="images/bathroomnew2.jpg" class="image">
-                <img src="images/bathroomnew2.jpg" alt="Extra Project 2" />
-              </a>
-              <h3>Extra Project 2</h3>
-            </article>
-    
+          <div class="services-grid">
+            <div class="service-box" style="background-image: url('images/caulking.png');">
+              <div class="service-box-text">Caulking</div>
+            </div>
+            <div class="service-box" style="background-image: url('images/plumbing.jpg');">
+              <div class="service-box-text">Plumbing</div>
+            </div>
+            <div class="service-box" style="background-image: url('images/Residential Property Maintenance');">
+              <div class="service-box-text">Maintenance</div>
+            </div>
+            <div class="service-box" style="background-image: url('images/Gutter Cleaning.png');">
+              <div class="service-box-text">Gutter Cleaning</div>
+            </div>
+	<div class="service-box" style="background-image: url('images/furniture-assembly.png');">
+ 	 <div class="service-box-text">furniture-assembly</div>
+	</div>
+
+            <div class="service-box" style="background-image: url('images/Ceiling Fan Installation.png');">
+              <div class="service-box-text">Ceiling Fan Installation</div>
+            </div>
+            <div class="service-box" style="background-image: url('images/fencing.png');">
+              <div class="service-box-text">Fencing</div>
+            </div>
+            <div class="service-box" style="background-image: url('images/To-Do Lists.png');">
+              <div class="service-box-text">To-Do Lists</div>
+            </div>
           </div>
         </section>
-        
-        <!-- Testimonials Section -->
-        <section id="testimonials">
-          <header class="major">
-            <h2>Testimonials</h2>
-          </header>
-          <div class="posts">
-            <!-- 1. Michael  -->
-            <article>
-              <header style="display: flex; align-items: center; gap: 10px;">
-                <img src="images/user1.png" alt="Michael" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;" />
-                <div>
-                  <h3 style="margin: 0;">Michael <span>★★★★★</span></h3>
-                  <p class="date" style="margin: 2px 0;">2023-04-01</p>
-                </div>
-              </header>
-              <p>
-                I’ve worked with many handymen in the Bay Area, and WorkerJack is by far the fastest and most reliable! As a real estate agent, I often need last-minute repairs before listing a home, and Jack and his team have never let me down. They respond within hours and get the job done within 48 hours—sometimes even the same day! I’ve worked with them on at least five properties, and every time, the quality is top-notch. Highly recommended for agents who need speed and efficiency!"
-              </p>
-            </article>
 
-            <!-- 2. Lee -->
-            <article>
-              <header style="display: flex; align-items: center; gap: 10px;">
-                <img src="images/user2.png" alt=" Lee" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;" />
-                <div>
-                  <h3 style="margin: 0;">Lee <span>★★★★★</span></h3>
-                  <p class="date" style="margin: 2px 0;">2024-08-13</p>
-                </div>
-              </header>
-              <p>
-                Jack helped me patch and repaint a section of drywall that got damaged while rearranging furniture. We got lucky—he had an opening the same day, and I was able to get it taken care of right away.
-
-                The work was done smoothly, no surprises, and the wall looks flawless. What I really appreciated was the clear, upfront pricing—no hidden fees, no last-minute add-ons. I also liked how easy the payment process was—Zelle made it quick and hassle-free.
-
-                Definitely keeping Jack in my contacts for future repairs. Well done, Jack!
-              </p>
-            </article>
-
-            <!-- 3. Catherine -->
-            <article>
-              <header style="display: flex; align-items: center; gap: 10px;">
-                <img src="images/user3.png" alt="Catherine" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;" />
-                <div>
-                  <h3 style="margin: 0;">Catherine<span>★★★★★</span></h3>
-                  <p class="date" style="margin: 2px 0;">2023-01-07</p>
-                </div>
-              </header>
-              <p>
-                I was impressed with Jack’s professionalism and attention to detail when he installed my new kitchen cabinets. He even offered valuable tips for future maintenance. Fantastic job!
-              </p>
-            </article>
-
-            <!-- 4. Dora  -->
-            <article>
-              <header style="display: flex; align-items: center; gap: 10px;">
-                <img src="images/user4.png" alt="Dora" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;" />
-                <div>
-                  <h3 style="margin: 0;">Dora <span>★★★★★</span></h3>
-                  <p class="date" style="margin: 2px 0;">2023-03-10</p>
-                </div>
-              </header>
-              <p>
-                Jack transformed my outdated bathroom into a modern oasis. His expertise, patience, and problem-solving skills made the entire process seamless and stress-free. I’m thrilled with the outcome!
-              </p>
-            </article>
-
-            <!-- 5. John  -->
-            <article>
-              <header style="display: flex; align-items: center; gap: 10px;">
-                <img src="images/user5.png" alt="John" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;" />
-                <div>
-                  <h3 style="margin: 0;">John <span>★★★★★</span></h3>
-                  <p class="date" style="margin: 2px 0;">2023-02-25</p>
-                </div>
-              </header>
-              <p>
-                Jack’s quick response and quality workmanship saved me from a potential plumbing disaster. He diagnosed the issue right away, fixed it promptly, and left everything spotless.
-              </p>
-            </article>
-          </div>
-        </section>
-        
         <!-- Contact Section -->
         <section id="contact">
           <header class="major">
